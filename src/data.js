@@ -1,11 +1,9 @@
 import video from "./assets/background.mp4";
-import fotoprofile from "./assets/foto ihsan.png";
 // ====== GANTI DATA INI DENGAN DATA KAMU ======
 export const profile = {
   name: "Ihsan Maulidi",
   headline: "Mahasiswa Teknik Informatika",
   tagline: "this is all about me",
-  photo: fotoprofile, 
   video : video,          
   bio: "Informatics Engineering Student",
   info: [
