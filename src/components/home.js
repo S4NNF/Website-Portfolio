@@ -9,11 +9,6 @@ export default function Home({ onNavigate }) {
       )}
       <div className="hero-overlay" />
       <Container fluid className="hero-inner">
-        {profile.photo ? (
-          <img className="hero-photo" src={profile.photo} alt={profile.name} />
-        ) : (
-          <div className="hero-photo hero-initial">{profile.name.charAt(0)}</div>
-        )}
         <h2 className="hero-title">{profile.name}: {profile.headline}</h2>
         <p className="hero-tagline">{profile.tagline}</p>
         <Button className="btn-accent" onClick={() => onNavigate("contact")}>Kolaborasi Project</Button>
