@@ -12,7 +12,7 @@ export const profile = {
     { label: "Kampus", value: "Politeknik Elektronika Negeri Surabaya" },
     { label: "Domisili", value: "Pontianak" },
     { label: "Tools", value: "Figma, Canva, Capcut, Microsoft Office, Vs Code, GitHub" },
-    { label: "Programming Language", value: "React, JavaScript, Python, C, C++" },
+    { label: "Programming Language", value: "PHP, JavaScript, Python, C, C++" },
   ],
   email: "ihsaninformatika69@gmail.com",
   whatsapp: "628123456789",   // format internasional tanpa +
