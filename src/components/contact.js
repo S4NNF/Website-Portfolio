@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container, Form, Button, Alert, Spinner } from "react-bootstrap";
 import { profile } from "../data";
 
-const SHEET_URL = process.env.REACT_API_PROJEK;
+const SHEET_URL = process.env.REACT_APP_SHEET_URL;
 const emptyForm = { name: "", email: "", message: "" };
 
 export default function Contact() {
