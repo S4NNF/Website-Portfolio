@@ -8,13 +8,15 @@ const emptyForm = { name: "", email: "", message: "" };
 export default function Contact() {
   const [form, setForm] = useState(emptyForm);
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
-    try {
+        try {
+      if (!SHEET_URL) throw new Error("SHEET_URL kosong (variabel belum terbaca)");
       const res = await fetch(SHEET_URL, {
         method: "POST",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
@@ -26,6 +28,7 @@ export default function Contact() {
       setStatus("success");
     } catch (err) {
       console.error(err);
+      setErrorMsg(String(err.message || err));
       setStatus("error");
     }
   };
