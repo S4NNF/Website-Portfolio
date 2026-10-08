@@ -1,7 +1,7 @@
 import { Carousel, Container, Badge, Button } from "react-bootstrap";
 import { projects } from "../data";
 
-// Panah buatan sendiri (SVG). Warna panah ada di stroke="#ffffff"
+// Panah putih buatan sendiri (SVG)
 function Arrow({ dir }) {
   return (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
@@ -17,18 +17,12 @@ export default function Projects() {
       <Container fluid className="inner">
         <p className="kicker">Portofolio</p>
         <h2>Proyek Pilihan</h2>
-        <Carousel interval={5000} prevIcon={<Arrow dir="prev" />} nextIcon={<Arrow dir="next" />}>
+        <Carousel interval={null} prevIcon={<Arrow dir="prev" />} nextIcon={<Arrow dir="next" />}>
           {projects.map((p, i) => (
             <Carousel.Item key={p.title}>
-              {/* Kalau projek punya field "image" di data.js, gambarnya jadi latar kartu */}
-              <div
-                className="slide"
-                style={p.image ? {
-                  backgroundImage: `linear-gradient(rgba(11,15,20,.75), rgba(11,15,20,.85)), url(${p.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                } : undefined}
-              >
+              <div className="slide">
+                {/* Screenshot projek: tampil sebagai gambar biasa di atas teks */}
+                {p.image && <img className="slide-img" src={p.image} alt={`Screenshot ${p.title}`} />}
                 <small>Project {i + 1}</small>
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>

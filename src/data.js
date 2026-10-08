@@ -1,5 +1,5 @@
 import video from "./assets/background.mp4";
-import poto from "./assets/website Pembelajaran.png"
+import poto from "./assets/Website Pembelajaran.png"
 // ====== GANTI DATA INI DENGAN DATA KAMU ======
 export const profile = {
   name: "Ihsan Maulidi",
