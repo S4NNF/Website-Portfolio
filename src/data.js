@@ -1,4 +1,5 @@
 import video from "./assets/background.mp4";
+import poto from "./assets/website Pembelajaran.png"
 // ====== GANTI DATA INI DENGAN DATA KAMU ======
 export const profile = {
   name: "Ihsan Maulidi",
@@ -22,7 +23,7 @@ export const profile = {
 };
 
 export const projects = [
-  { title: "Judul Projek 1", desc: "Deskripsi singkat projek pertama.", tech: ["React", "Bootstrap"], link: "#" },
+  { title: "Website SIAKAD", desc: "Front-End Website SIAKAD", tech: ["React", "Bootstrap"], link: "#", image: poto },
   { title: "Judul Projek 2", desc: "Deskripsi singkat projek kedua.", tech: ["PHP", "MySQL"], link: "#" },
   { title: "Judul Projek 3", desc: "Deskripsi singkat projek ketiga.", tech: ["Node.js"], link: "#" },
 ];
